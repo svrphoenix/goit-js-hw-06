@@ -12,3 +12,7 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const markup = images
+  .reduce((acum, {url, alt}) => acum +=`<li class="gallery__item"><image src=${url} alt=${alt}></li>`, '');
+document.querySelector(".gallery").insertAdjacentHTML("afterbegin", markup);
