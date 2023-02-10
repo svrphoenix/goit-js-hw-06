@@ -2,10 +2,11 @@ const inputRef = document.querySelector("#validation-input");
 
 const onInputBlur = event => {
   const isCorrectLength =
-    event.currentTarget.value.trim().length === Number(inputRef.dataset.length);
+    event.currentTarget.value.trim().length ===
+    Number(event.currentTarget.dataset.length);
   isCorrectLength
-    ? inputRef.className = "valid"
-    : inputRef.className = "invalid";
+    ? (event.currentTarget.className = "valid")
+    : (event.currentTarget.className = "invalid");
 };
 
 inputRef.addEventListener("blur", onInputBlur);
