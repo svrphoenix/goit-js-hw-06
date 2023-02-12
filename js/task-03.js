@@ -14,5 +14,5 @@ const images = [
 ];
 
 const markup = images
-  .reduce((acum, {url, alt}) => acum +=`<li class="gallery__item"><image src=${url} alt=${alt}></li>`, '');
-document.querySelector(".gallery").insertAdjacentHTML("afterbegin", markup);
+  .reduce((acum, {url, alt}) => acum +=`<li class='gallery__item'><image src=${url} alt=${alt}></li>`, '');
+document.querySelector('.gallery').insertAdjacentHTML('afterbegin', markup);

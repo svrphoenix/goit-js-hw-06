@@ -1,12 +1,12 @@
-const inputRef = document.querySelector("#name-input");
-const nameSpanRef = document.querySelector("#name-output");
+const inputRef = document.querySelector('#name-input');
+const nameSpanRef = document.querySelector('#name-output');
 const initalInputValue = nameSpanRef.textContent;
 
 const onInputChange = event => {
-  nameSpanRef.textContent = event.currentTarget.value;
-  if (event.currentTarget.value === "") {
+  nameSpanRef.textContent = event.target.value;
+  if (event.target.value === '') {
     nameSpanRef.textContent = initalInputValue;
   }
 };
 
-inputRef.addEventListener("input", onInputChange);
+inputRef.addEventListener('input', onInputChange);
