@@ -4,9 +4,8 @@ const onInputBlur = event => {
   const isCorrectLength =
     event.target.value.trim().length ===
     Number(event.target.dataset.length);
-  isCorrectLength
-    ? (event.target.className = 'valid')
-    : (event.target.className = 'invalid');
-};
+  
+  event.target.className = isCorrectLength ? 'valid' : 'invalid';
+  };
 
 inputRef.addEventListener('blur', onInputBlur);
